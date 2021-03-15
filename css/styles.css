@@ -150,6 +150,21 @@ ol {
 .menu-nav .link.current {
   color: var(--accent-color);
 }
+/*создаем подчеркивание псевдоэлементом под активной страницей*/
+.menu-nav .link.current::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 4px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 28px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+ .mnav-item {
+  position: relative; /*задаем для позиционирования подчеркивания активной страницы*/
+ }
 
 .menu-nav a {
   color: var(--title-text-color);
@@ -276,12 +291,12 @@ ol {
 /*===Modal window===*/
 .modal {
   position: fixed;
-    min-width: 592px;
+    min-width: 528px;
     min-height: 581px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: var(--primary-white-color);
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     
